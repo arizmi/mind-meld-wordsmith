@@ -12,19 +12,19 @@ const Services = () => {
       icon: Video,
       title: "Script Writing",
       description: "Compelling scripts for long-form and short-form video content",
-      features: ["YouTube scripts", "TikTok content", "Sales videos", "Educational content"]
+      features: ["YouTube scripts", "TikTok content", "VSLs", "Educational content", "Sales scripts]
     },
     {
       icon: Target,
       title: "Guerilla Marketing",
       description: "Unconventional marketing strategies that maximize impact on minimal budgets",
-      features: ["Viral campaigns", "Street marketing", "Buzz generation", "Creative stunts"]
+      features: ["Viral campaigns", "Mass marketing", "Buzz generation", "Creative stunts"]
     },
     {
       icon: Brain,
-      title: "Psychomarketing",
-      description: "Psychology-driven marketing strategies for B2B and B2C applications",
-      features: ["Behavioral triggers", "Persuasion techniques", "Consumer psychology", "Conversion optimization"]
+      title: "Psymarketing",
+      description: "Utilise military and intelligence grade tactics in your campaigns",
+      features: ["Behavioral triggers", "Persuasion techniques", "Consumer psychology", "Psychological Programming"]
     }
   ];
 
