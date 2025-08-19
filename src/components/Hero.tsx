@@ -12,7 +12,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Transform your business with expert content writing, guerilla marketing, and psychomarketing strategies that convert.
+            Transform your business with expert content writing, guerilla marketing, and psymarketing strategies that convert.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-              Psychomarketing
+              Psymarketing
             </div>
           </div>
 
