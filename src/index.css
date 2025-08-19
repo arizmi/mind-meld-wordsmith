@@ -28,12 +28,10 @@ All colors MUST be HSL.
     /* Premium gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 26% 2%) 0%, hsl(220 20% 4%) 100%);
     --gradient-pink: linear-gradient(135deg, hsl(330 55% 68%) 0%, hsl(340 50% 72%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 93% 60%) 0%, hsl(50 88% 65%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(220 26% 3%) 0%, hsl(220 20% 5%) 100%);
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsla(330, 55%, 68%, 0.15);
-    --shadow-glow-gold: 0 0 40px hsla(45, 93%, 60%, 0.2);
     --shadow-card: 0 10px 40px hsla(220, 26%, 2%, 0.5);
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
@@ -107,10 +105,6 @@ All colors MUST be HSL.
     @apply relative overflow-hidden;
     box-shadow: var(--shadow-glow);
   }
-  .glow-button-gold {
-    @apply relative overflow-hidden;
-    box-shadow: var(--shadow-glow-gold);
-  }
   .glow-button::before {
     @apply absolute inset-0 opacity-0 transition-opacity duration-300;
     content: '';
@@ -118,15 +112,6 @@ All colors MUST be HSL.
     border-radius: inherit;
   }
   .glow-button:hover::before {
-    @apply opacity-20;
-  }
-  .glow-button-gold::before {
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    content: '';
-    background: var(--gradient-gold);
-    border-radius: inherit;
-  }
-  .glow-button-gold:hover::before {
     @apply opacity-20;
   }
   .animate-fade-in {
@@ -152,13 +137,5 @@ All colors MUST be HSL.
   }
   50% {
     box-shadow: 0 0 60px hsla(330, 55%, 68%, 0.25);
-  }
-}
-@keyframes glowPulseGold {
-  0%, 100% {
-    box-shadow: var(--shadow-glow-gold);
-  }
-  50% {
-    box-shadow: 0 0 60px hsla(45, 93%, 60%, 0.35);
   }
 }

@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="space-y-6">
             <Button 
               size="lg" 
-              className="glow-button-gold bg-gradient-gold hover:bg-gradient-gold/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse-gold"
+              className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse"
             >
               Start Your Transformation
               <ArrowRight className="ml-2 h-5 w-5" />
