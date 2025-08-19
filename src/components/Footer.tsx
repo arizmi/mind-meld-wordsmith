@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-xl font-bold">ContentCraft Pro</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Transforming businesses through expert content writing, guerilla marketing, and psychomarketing strategies that convert.
+              Transforming businesses through expert content writing, guerilla marketing, and psymarketing strategies that convert.
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-2 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors">
@@ -37,7 +37,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-foreground transition-colors">Content Writing</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Script Writing</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Guerilla Marketing</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Psychomarketing</a></li>
+              <li><a href="#" className="hover:text-foreground transition-colors">Psymarketing</a></li>
             </ul>
           </div>
 
