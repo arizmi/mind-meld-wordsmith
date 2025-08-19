@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-gradient-gold flex items-center justify-center">
+            <div className="w-8 h-8 rounded bg-gradient-pink flex items-center justify-center">
               <span className="text-background font-bold text-sm">CC</span>
             </div>
             <span className="text-xl font-bold">ContentCraft Pro</span>
@@ -27,7 +27,7 @@ const Header = () => {
             </a>
           </nav>
 
-          <Button className="glow-button bg-gradient-gold hover:bg-gradient-gold/90 text-background font-semibold">
+          <Button className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold">
             Get Started
           </Button>
         </div>
