@@ -1,287 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-@layer base {
-  :root {
-    --background: 220 26% 2%;
-    --foreground: 45 29% 97%;
-    --card: 220 26% 3%;
-    --card-foreground: 45 29% 97%;
-    --popover: 220 26% 3%;
-    --popover-foreground: 45 29% 97%;
-    --primary: 330 50% 75%;
-    --primary-foreground: 220 26% 2%;
-    --secondary: 220 20% 8%;
-    --secondary-foreground: 45 29% 97%;
-    --muted: 220 20% 8%;
-    --muted-foreground: 217 10% 64%;
-    --accent: 330 50% 75%;
-    --accent-foreground: 220 26% 2%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 45 29% 97%;
-    --border: 220 20% 12%;
-    --input: 220 20% 12%;
-    --ring: 330 50% 75%;
-    /* Premium gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 26% 2%) 0%, hsl(220 20% 4%) 100%);
-    --gradient-pink: linear-gradient(135deg, hsl(330 50% 75%) 0%, hsl(340 45% 80%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 26% 3%) 0%, hsl(220 20% 5%) 100%);
-    
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsla(330, 50%, 75%, 0.15);
-    --shadow-card: 0 10px 40px hsla(220, 26%, 2%, 0.5);
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-  .dark {
-    --background: 220 26% 1%;
-    --foreground: 45 29% 97%;
-    --card: 220 26% 2%;
-    --card-foreground: 45 29% 97%;
-    --popover: 220 26% 2%;
-    --popover-foreground: 45 29% 97%;
-    --primary: 330 45% 70%;
-    --primary-foreground: 220 26% 1%;
-    --secondary: 220 20% 6%;
-    --secondary-foreground: 45 29% 97%;
-    --muted: 220 20% 6%;
-    --muted-foreground: 217 10% 60%;
-    --accent: 330 45% 70%;
-    --accent-foreground: 220 26% 1%;
-    --destructive: 0 84% 55%;
-    --destructive-foreground: 45 29% 97%;
-    --border: 220 20% 10%;
-    --input: 220 20% 10%;
-    --ring: 330 45% 70%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-@layer base {
-  * {
-    @apply border-border;
-    font-family: 'Courier New', monospace;
-  }
-  body {
-    @apply bg-background text-foreground antialiased;
-    background: var(--gradient-hero);
-    font-family: 'Courier New', monospace;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
-    font-family: 'Courier New', monospace;
-  }
-}
-@layer components {
-  .hero-text {
-    @apply text-4xl md:text-6xl lg:text-7xl font-black tracking-tight;
-  }
-  
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-pink-300 bg-clip-text text-transparent;
-  }
-  .service-badge {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-border/50 text-sm font-medium;
-  }
-  .testimonial-card {
-    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6;
-    background: var(--gradient-card);
-    box-shadow: var(--shadow-card);
-  }
-  .glow-button {
-    @apply relative overflow-hidden;
-    box-shadow: var(--shadow-glow);
-  }
-  .glow-button::before {
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    content: '';
-    background: var(--gradient-pink);
-    border-radius: inherit;
-  }
-  .glow-button:hover::before {
-    @apply opacity-20;
-  }
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
-  }
-  .animate-glow-pulse {
-    animation: glowPulse 2s infinite;
-  }
-  
-  .poo-word {
-    @apply relative inline-block font-black;
-    color: #8B4513;
-    animation: poopPlop 1.5s ease-out;
-  }
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Star } from "lucide-react";
 
-  .record-blink {
-    animation: recordFade 2s infinite ease-in-out;
-  }
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center justify-center pt-20 pb-16">
+      <div className="container mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <h1 className="hero-text">
+            <span className="block mb-4 typewriter-line-1 overflow-hidden">99% of content fails because it's <span className="poo-word">shit</span>.</span>
+            <span className="block typewriter-line-2 overflow-hidden">Start using <span className="brain-text">psychology</span> to <span className="brain-text">manipulate</span> buying.</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed typewriter-delay-1">
+            We apply government &amp; military grade psychological manipulation techniques to your operations.
+          </p>
 
-  .brain-text {
-    position: relative;
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    letter-spacing: 2px;
-    background: linear-gradient(45deg, #ec4899, #be185d, #ec4899);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: brainPulse 3s infinite, brainScan 2s infinite;
-  }
+          <div className="flex flex-wrap justify-center gap-4 mb-8 typewriter-delay-2">
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
+              Content Writing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
+              Script Writing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
+              Guerilla Marketing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
+              Psymarketing
+            </div>
+          </div>
 
-  .typewriter {
-    overflow: hidden;
-    border-right: 2px solid rgba(236, 72, 153, 0.75);
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
+          <div className="space-y-6 typewriter-delay-3">
+            <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
+              Start Your Transformation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
 
-  .typewriter-line-1 {
-    animation: typing-line-1 2s steps(40, end), blink-caret 0.75s step-end infinite;
-    animation-delay: 0s;
-  }
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-gold text-gold" />
+                ))}
+              </div>
+              <span>4.9/5 from 127 clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-  .typewriter-line-2 {
-    animation: typing-line-2 3s steps(50, end), blink-caret 0.75s step-end infinite;
-    animation-delay: 2.5s;
-    animation-fill-mode: both;
-    opacity: 0;
-  }
-
-  .typewriter-delay-1 {
-    animation: fadeInTypewriter 0.5s ease-in;
-    animation-delay: 3s;
-    animation-fill-mode: both;
-    opacity: 0;
-  }
-
-  .typewriter-delay-2 {
-    animation: fadeInTypewriter 0.5s ease-in;
-    animation-delay: 4s;
-    animation-fill-mode: both;
-    opacity: 0;
-  }
-
-  .typewriter-delay-3 {
-    animation: fadeInTypewriter 0.5s ease-in;
-    animation-delay: 5s;
-    animation-fill-mode: both;
-    opacity: 0;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: var(--shadow-glow);
-  }
-  50% {
-    box-shadow: 0 0 60px hsla(330, 50%, 75%, 0.25);
-  }
-}
-
-@keyframes poopPlop {
-  0% {
-    transform: translateY(-100vh) rotate(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(0) rotate(0deg);
-  }
-  85% {
-    transform: translateY(-10px) rotate(-5deg) scaleY(0.9);
-  }
-  90% {
-    transform: translateY(5px) rotate(3deg) scaleY(1.1);
-  }
-  95% {
-    transform: translateY(-3px) rotate(-1deg) scaleY(0.95);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg) scaleY(1);
-  }
-}
-
-@keyframes recordFade {
-  0%, 100% {
-    background-color: rgb(239, 68, 68);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
-  }
-  50% {
-    background-color: rgb(185, 28, 28);
-    opacity: 0.2;
-    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
-  }
-}
-
-@keyframes brainPulse {
-  0%, 100% { 
-    text-shadow: 0 0 5px rgba(236, 72, 153, 0.5);
-    transform: scale(1);
-  }
-  50% { 
-    text-shadow: 0 0 20px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
-    transform: scale(1.02);
-  }
-}
-
-@keyframes brainScan {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes typing-line-1 {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes typing-line-2 {
-  from { width: 0; opacity: 1; }
-  to { width: 100%; opacity: 1; }
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: rgba(236, 72, 153, 0.75); }
-}
-
-@keyframes fadeInTypewriter {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+export default Hero;
