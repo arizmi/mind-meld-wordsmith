@@ -132,6 +132,45 @@ All colors MUST be HSL.
     animation: poopPlop 1.5s ease-out;
   }
 }
+.record-light {
+  @apply relative;
+  animation: recordPulse 2s infinite ease-in-out;
+}
+
+.record-light::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: recordGlow 2s infinite ease-in-out;
+}
+
+@keyframes recordPulse {
+  0%, 100% {
+    background-color: rgb(239, 68, 68);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    background-color: rgb(220, 38, 38);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 1);
+  }
+}
+
+@keyframes recordGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
