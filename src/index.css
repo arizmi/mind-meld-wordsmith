@@ -12,29 +12,29 @@ All colors MUST be HSL.
     --card-foreground: 45 29% 97%;
     --popover: 220 26% 3%;
     --popover-foreground: 45 29% 97%;
-    --primary: 0 100% 50%;
+    --primary: 330 50% 75%;
     --primary-foreground: 220 26% 2%;
-    --secondary: 0 84% 50%;
+    --secondary: 220 20% 8%;
     --secondary-foreground: 45 29% 97%;
     --muted: 220 20% 8%;
     --muted-foreground: 217 10% 64%;
-    --accent: 0 100% 50%;
+    --accent: 330 50% 75%;
     --accent-foreground: 220 26% 2%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 45 29% 97%;
     --border: 220 20% 12%;
     --input: 220 20% 12%;
-    --ring: 0 100% 50%;
+    --ring: 330 50% 75%;
     --gold: 45 90% 60%;
     --gold-foreground: 220 26% 2%;
     /* Premium gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 26% 2%) 0%, hsl(220 20% 4%) 100%);
-    --gradient-red: linear-gradient(135deg, hsl(0 100% 50%) 0%, hsl(0 84% 45%) 100%);
+    --gradient-pink: linear-gradient(135deg, hsl(330 50% 75%) 0%, hsl(340 45% 80%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(45 90% 60%) 0%, hsl(50 85% 65%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(220 26% 3%) 0%, hsl(220 20% 5%) 100%);
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsla(0, 100%, 50%, 0.15);
+    --shadow-glow: 0 0 40px hsla(330, 50%, 75%, 0.15);
     --shadow-card: 0 10px 40px hsla(220, 26%, 2%, 0.5);
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
@@ -53,19 +53,19 @@ All colors MUST be HSL.
     --card-foreground: 45 29% 97%;
     --popover: 220 26% 2%;
     --popover-foreground: 45 29% 97%;
-    --primary: 0 95% 48%;
+    --primary: 330 45% 70%;
     --primary-foreground: 220 26% 1%;
-    --secondary: 0 84% 45%;
+    --secondary: 220 20% 6%;
     --secondary-foreground: 45 29% 97%;
     --muted: 220 20% 6%;
     --muted-foreground: 217 10% 60%;
-    --accent: 0 95% 48%;
+    --accent: 330 45% 70%;
     --accent-foreground: 220 26% 1%;
     --destructive: 0 84% 55%;
     --destructive-foreground: 45 29% 97%;
     --border: 220 20% 10%;
     --input: 220 20% 10%;
-    --ring: 0 95% 48%;
+    --ring: 330 45% 70%;
     --gold: 45 85% 55%;
     --gold-foreground: 220 26% 1%;
     --sidebar-background: 240 5.9% 10%;
@@ -94,9 +94,26 @@ All colors MUST be HSL.
   .hero-text {
     @apply text-4xl md:text-6xl lg:text-7xl font-black tracking-tight;
   }
+
+  .record-blink {
+  animation: recordBlink 1s infinite;
+}
+
+@keyframes recordFade {
+  0%, 100% {
+    background-color: rgb(239, 68, 68);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    background-color: rgb(185, 28, 28);
+    opacity: 0.2;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
+  }
+}
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-pink-300 bg-clip-text text-transparent;
   }
   .service-badge {
     @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-border/50 text-sm font-medium;
@@ -113,7 +130,7 @@ All colors MUST be HSL.
   .glow-button::before {
     @apply absolute inset-0 opacity-0 transition-opacity duration-300;
     content: '';
-    background: var(--gradient-red);
+    background: var(--gradient-pink);
     border-radius: inherit;
   }
   .glow-button:hover::before {
@@ -131,15 +148,46 @@ All colors MUST be HSL.
     color: #8B4513;
     animation: poopPlop 1.5s ease-out;
   }
+}
+.record-light {
+  @apply relative;
+  animation: recordPulse 2s infinite ease-in-out;
+}
 
-  .record-blink {
-    animation: recordFade 2s infinite ease-in-out;
+.record-light::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: recordGlow 2s infinite ease-in-out;
+}
+
+@keyframes recordPulse {
+  0%, 100% {
+    background-color: rgb(239, 68, 68);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
   }
-
-  .pulse-pink {
-    animation: pulseRedText 2s infinite ease-in-out;
+  50% {
+    background-color: rgb(220, 38, 38);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 1);
   }
 }
+
+@keyframes recordGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -155,7 +203,7 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-glow);
   }
   50% {
-    box-shadow: 0 0 60px hsla(0, 100%, 50%, 0.25);
+    box-shadow: 0 0 60px hsla(330, 50%, 75%, 0.25);
   }
 }
 
@@ -183,27 +231,38 @@ All colors MUST be HSL.
     transform: translateY(0) rotate(0deg) scaleY(1);
   }
 }
-
-@keyframes recordFade {
-  0%, 100% {
-    background-color: rgb(239, 68, 68);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
-  }
-  50% {
-    background-color: rgb(185, 28, 28);
-    opacity: 0.2;
-    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
-  }
+.record-blink {
+  animation: recordFade 2s infinite ease-in-out;
 }
 
-@keyframes pulseRedText {
+.pulse-pink {
+  animation: pulsePink 2s infinite ease-in-out;
+}
+
+.pulse-pink {
+  animation: pulsePinkText 2s infinite ease-in-out;
+}
+
+@keyframes pulsePinkText {
   0%, 100% {
-    color: #FF0000;
+    color: hsl(var(--primary));
     opacity: 1;
   }
   50% {
-    color: #CC0000;
-    opacity: 0.7;
+    color: hsl(330 60% 90%);
+    opacity: 0.5;
+  }
+}
+.pulse-red-text {
+  color: #dc2626;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
