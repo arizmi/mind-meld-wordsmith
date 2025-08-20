@@ -143,13 +143,17 @@ All colors MUST be HSL.
   animation: brightRedPulse 2s infinite ease-in-out !important;
 }
 
+.animate-pulse {
+  animation: brightRedPulse 2s infinite ease-in-out !important;
+}
+
 @keyframes brightRedPulse {
   0%, 100% {
-    color: #ff0000 !important;
+    color: #ff2500 !important;
     opacity: 1;
   }
   50% {
-    color: #cc0000 !important;
+    color: #cc1e00 !important;
     opacity: 0.8;
   }
 }
