@@ -5,17 +5,17 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 pb-16">
       <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+        <div className="max-w-4xl mx-auto space-y-8">
           <h1 className="hero-text">
-            <span className="block mb-4">99% of content fails because it's <span className="poo-word">shit</span>.</span>
-            <span className="block">Start using <span className="brain-text">psychology</span> to <span className="brain-text">manipulate</span> buying.</span>
+            <span className="block mb-4 typewriter-line-1 overflow-hidden">99% of content fails because it's <span className="poo-word">shit</span>.</span>
+            <span className="block typewriter-line-2 overflow-hidden">Start using <span className="brain-text">psychology</span> to <span className="brain-text">manipulate</span> buying.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed typewriter-delay-1">
             We apply government &amp; military grade psychological manipulation techniques to your operations.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-4 mb-8 typewriter-delay-2">
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
               Content Writing
@@ -34,7 +34,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6 typewriter-delay-3">
             <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
               Start Your Transformation
               <ArrowRight className="ml-2 h-5 w-5" />
