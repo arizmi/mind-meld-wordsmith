@@ -99,16 +99,16 @@ All colors MUST be HSL.
   animation: recordBlink 1s infinite;
 }
 
-@keyframes recordBlink {
-  0%, 50% {
+@keyframes recordFade {
+  0%, 100% {
     background-color: rgb(239, 68, 68);
     opacity: 1;
-    box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
   }
-  51%, 100% {
-    background-color: rgb(153, 27, 27);
-    opacity: 0.3;
-    box-shadow: none;
+  50% {
+    background-color: rgb(185, 28, 28);
+    opacity: 0.2;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
   }
 }
   
@@ -235,15 +235,3 @@ All colors MUST be HSL.
   animation: recordFade 2s infinite ease-in-out;
 }
 
-@keyframes recordFade {
-  0%, 100% {
-    background-color: rgb(239, 68, 68);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
-  }
-  50% {
-    background-color: rgb(185, 28, 28);
-    opacity: 0.2;
-    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
-  }
-}
