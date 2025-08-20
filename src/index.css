@@ -120,6 +120,44 @@ All colors MUST be HSL.
   .animate-glow-pulse {
     animation: glowPulse 2s infinite;
   }
+  
+  .poo-word {
+    @apply relative inline-block font-black;
+    color: #8B4513;
+    animation: poopPlop 1.5s ease-out;
+  }
+
+  .record-blink {
+    animation: recordFade 2s infinite ease-in-out;
+  }
+
+  .brain-text {
+    position: relative;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ec4899, #be185d, #ec4899);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: brainPulse 3s infinite, brainScan 2s infinite;
+  }
+
+  .brain-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(90deg, transparent 48%, rgba(236, 72, 153, 0.3) 49%, rgba(236, 72, 153, 0.3) 51%, transparent 52%),
+      linear-gradient(0deg, transparent 48%, rgba(236, 72, 153, 0.2) 49%, rgba(236, 72, 153, 0.2) 51%, transparent 52%);
+    background-size: 20px 20px;
+    pointer-events: none;
+    animation: brainGrid 4s infinite;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -138,4 +176,63 @@ All colors MUST be HSL.
   50% {
     box-shadow: 0 0 60px hsla(330, 50%, 75%, 0.25);
   }
+}
+
+@keyframes poopPlop {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) rotate(0deg);
+  }
+  85% {
+    transform: translateY(-10px) rotate(-5deg) scaleY(0.9);
+  }
+  90% {
+    transform: translateY(5px) rotate(3deg) scaleY(1.1);
+  }
+  95% {
+    transform: translateY(-3px) rotate(-1deg) scaleY(0.95);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scaleY(1);
+  }
+}
+
+@keyframes recordFade {
+  0%, 100% {
+    background-color: rgb(239, 68, 68);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    background-color: rgb(185, 28, 28);
+    opacity: 0.2;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
+  }
+}
+
+@keyframes brainPulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px rgba(236, 72, 153, 0.5);
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes brainScan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes brainGrid {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
 }
