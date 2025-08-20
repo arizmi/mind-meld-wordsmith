@@ -11,24 +11,22 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">We apply government &amp; military grade psychological manipulation techniques to your operations.</p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500"></div>
-              Content Writing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500"></div>
-              Script Writing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500"></div>
-              Guerilla Marketing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500"></div>
-              Psymarketing
-            </div>
-          </div>
+          <div className="service-badge">
+  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+  Content Writing
+</div>
+<div className="service-badge">
+  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+  Script Writing
+</div>
+<div className="service-badge">
+  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+  Guerilla Marketing
+</div>
+<div className="service-badge">
+  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+  Psymarketing
+</div>
 
           <div className="space-y-6">
             <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
