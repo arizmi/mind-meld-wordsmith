@@ -5,7 +5,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
-            <span className="block">99% of content fails because it's shit.</span>
+            <span className="block">99% of content fails because it's <span className="poo-word">shit</span>.</span>
             <span className="block gradient-text">Start using psychology to manipulate buying.</span>
           </h1>
           
