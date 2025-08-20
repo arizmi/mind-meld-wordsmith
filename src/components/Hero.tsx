@@ -6,12 +6,10 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
             <span className="block">99% of content fails because it's shit.</span>
-            <span className="block gradient-text">Weaponise psychology to turn words into revenue</span>
+            <span className="block gradient-text">Start using psychology to manipulate buying.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Transform your business with expert content writing, guerilla marketing, and psymarketing strategies that convert.
-          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">I will apply government &amp; military grade psychological manipulation techniques to your operations.</p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
