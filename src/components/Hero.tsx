@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
             <span className="block mb-4">99% of content fails because it's <span className="poo-word">shit</span>.</span>
-            <span className="block">Start using <span className="text-red-500 animate-pulse">psychology</span> to <span className="text-red-500 animate-pulse">manipulate</span> buying.</span>
+            <span className="block">Start using <span className="brain-text">psychology</span> to <span className="brain-text">manipulate</span> buying.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
