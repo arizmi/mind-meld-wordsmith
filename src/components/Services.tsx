@@ -12,7 +12,7 @@ const Services = () => {
       icon: Video,
       title: "Script Writing",
       description: "Compelling scripts for long-form and short-form video content",
-      features: ["YouTube scripts", "TikTok content", "VSLs", "Educational content", "Sales scripts]
+      features: ["YouTube scripts", "TikTok content", "VSLs", "Educational content", "Sales scripts"]
     },
     {
       icon: Target,
