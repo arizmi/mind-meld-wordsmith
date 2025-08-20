@@ -133,10 +133,9 @@ All colors MUST be HSL.
 
   .brain-text {
     position: relative;
-    font-family: 'Courier New', monospace;
     font-weight: bold;
     letter-spacing: 2px;
-    background: linear-gradient(45deg, #ec4899, #be185d, #ec4899);
+    background: linear-gradient(45deg, rgb(205, 28, 24), rgb(180, 20, 20), rgb(205, 28, 24));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
