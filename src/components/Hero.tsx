@@ -9,7 +9,7 @@ const Hero = () => {
             <span className="block gradient-text">Start using psychology to manipulate buying.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">I will apply government &amp; military grade psychological manipulation techniques to your operations.</p>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">We apply government &amp; military grade psychological manipulation techniques to your operations.</p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
