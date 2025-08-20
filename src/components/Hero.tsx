@@ -11,29 +11,30 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">We apply government &amp; military grade psychological manipulation techniques to your operations.</p>
 
-          <div className="service-badge">
-  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
-  Content Writing
-</div>
-<div className="service-badge">
-  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
-  Script Writing
-</div>
-<div className="service-badge">
-  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
-  Guerilla Marketing
-</div>
-<div className="service-badge">
-  <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
-  Psymarketing
-</div>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+              Content Writing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+              Script Writing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+              Guerilla Marketing
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-light"></div>
+              Psymarketing
+            </div>
+          </div>
 
           <div className="space-y-6">
             <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
               Start Your Transformation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
