@@ -139,21 +139,3 @@ All colors MUST be HSL.
     box-shadow: 0 0 60px hsla(330, 50%, 75%, 0.25);
   }
 }
-.animate-pulse {
-  animation: brightRedPulse 2s infinite ease-in-out !important;
-}
-
-.animate-pulse {
-  animation: brightRedPulse 2s infinite ease-in-out !important;
-}
-
-@keyframes brightRedPulse {
-  0%, 100% {
-    color: #ff2500 !important;
-    opacity: 1;
-  }
-  50% {
-    color: #cc1e00 !important;
-    opacity: 0.8;
-  }
-}
