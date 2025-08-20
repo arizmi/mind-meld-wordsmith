@@ -235,3 +235,17 @@ All colors MUST be HSL.
   animation: recordFade 2s infinite ease-in-out;
 }
 
+.pulse-pink {
+  animation: pulsePink 2s infinite ease-in-out;
+}
+
+@keyframes pulsePink {
+  0%, 100% {
+    text-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary));
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary)), 0 0 40px hsl(var(--primary));
+    transform: scale(1.05);
+  }
+}
