@@ -103,16 +103,19 @@ All colors MUST be HSL.
   }
   .glow-button {
     @apply relative overflow-hidden;
-    box-shadow: var(--shadow-glow);
+    background: rgb(220, 38, 38) !important;
+    color: rgb(0, 0, 0) !important;
+    border: none !important;
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.8), 0 0 40px rgba(220, 38, 38, 0.6), 0 0 60px rgba(220, 38, 38, 0.4);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-  .glow-button::before {
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    content: '';
-    background: var(--gradient-pink);
-    border-radius: inherit;
-  }
-  .glow-button:hover::before {
-    @apply opacity-20;
+  
+  .glow-button:hover {
+    background: rgb(239, 68, 68) !important;
+    box-shadow: 0 0 30px rgba(220, 38, 38, 1), 0 0 60px rgba(220, 38, 38, 0.8), 0 0 90px rgba(220, 38, 38, 0.6);
+    transform: scale(1.02);
   }
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out;
