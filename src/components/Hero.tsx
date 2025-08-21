@@ -16,19 +16,19 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Content Writing
+              Psymarketing
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Script Writing
+              Paid Advertising
+            </div>
+            <div className="service-badge">
+              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
+              Ghostwriting
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
               Guerilla Marketing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Psymarketing
             </div>
           </div>
 
