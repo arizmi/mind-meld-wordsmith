@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
             <span className="block mb-4">99% of content fails because it's <span className="poo-word">shit</span>.</span>
-            <span className="block">Start using <span className="text-primary font-bold">psychology</span> to <span className="text-primary font-bold">manipulate</span> buying.</span>
+            <span className="block">Start using <span className="text-red-500 font-bold">psychology</span> to <span className="text-red-500 font-bold">manipulate</span> buying.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -36,8 +36,7 @@ const Hero = () => {
 
           <div className="space-y-6">
             <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
-              Start Your Transformation
-              <ArrowRight className="ml-2 h-5 w-5" />
+              DO NOT PRESS
             </Button>
 
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
