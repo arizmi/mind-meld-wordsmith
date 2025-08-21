@@ -1,4 +1,4 @@
-import { PenTool, Video, Target, Brain, Ghost, DollarSign, Flame } from "lucide-react"; 
+import { PenTool, Video, Target, Brain, Ghost, DollarSign, Flame, LocateFixed } from "lucide-react"; 
 const Services = () => {
   const services = [{
     icon: PenTool,
@@ -6,12 +6,12 @@ const Services = () => {
     description: "We use the power of language & words to rewire minds and trigger unconscious buying decisions",
     features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
   }, {
-    icon: DollarSign,
+    icon: LocateFixed,
     title: "Paid Advertising",
     description: "Psyop level ad campaigns that exploit cognitive biases and trigger impulsions to buy",
     features: ["Google Search Ads", "Google Shopping Ads", "YouTube advertising", "Google Display Network", "Bing Ads"]
   }, {
-    icon: Flame,
+    icon: Target,
     title: "Guerilla Marketing",
     description: "Stealth tactics that infiltrate minds through unexpected channels, creating explosive brand awareness without massive ad spend",
     features: ["Viral campaigns", "Ambush marketing", "Publicity stunts", "Psychological triggers", "Social hijacking"]
