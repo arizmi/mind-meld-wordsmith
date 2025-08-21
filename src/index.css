@@ -111,17 +111,43 @@ All colors MUST be HSL.
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
+  
+  /* DRAMATIC RED GLOWING BUTTON - like "DO NOT PRESS" */
   .glow-button {
     @apply relative overflow-hidden;
-    background: rgb(220, 38, 38) !important;
-    color: white !important;
-    box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
-    transition: all 0.3s ease;
+    background: #ff0000 !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 16px 32px !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    
+    /* Intense red glow effect */
+    box-shadow: 
+      0 0 20px #ff0000,
+      0 0 40px #ff0000,
+      0 0 60px #ff0000,
+      0 0 80px #ff0000,
+      inset 0 0 20px rgba(255, 0, 0, 0.1) !important;
   }
-  
+
   .glow-button:hover {
-    box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
-    transform: translateY(-2px);
+    background: #ff3333 !important;
+    color: #000000 !important;
+    transform: scale(1.05) !important;
+    
+    /* Even more intense glow on hover */
+    box-shadow: 
+      0 0 30px #ff0000,
+      0 0 60px #ff0000,
+      0 0 90px #ff0000,
+      0 0 120px #ff0000,
+      0 0 150px #ff0000,
+      inset 0 0 30px rgba(255, 0, 0, 0.2) !important;
   }
   
   .bg-gradient-pink {
@@ -136,48 +162,33 @@ All colors MUST be HSL.
     animation: poopPlop 2s ease-out;
   }
 
-  .brain-text {
-    @apply relative;
-    background: linear-gradient(
-      45deg,
-      #dc2626,
-      #ef4444,
-      #f87171,
-      #fca5a5,
-      #fed7d7,
-      #fca5a5,
-      #dc2626
-    );
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: brainScan 3s ease-in-out infinite, brainPulse 2s ease-in-out infinite;
-    position: relative;
-  }
-
-  .brain-text::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      linear-gradient(90deg, transparent 0%, rgba(220, 38, 38, 0.1) 50%, transparent 100%),
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(220, 38, 38, 0.1) 2px,
-        rgba(220, 38, 38, 0.1) 4px
-      );
-    animation: brainGrid 1.5s ease-in-out infinite;
-    pointer-events: none;
-  }
-
   .record-blink {
     animation: recordFade 1.5s ease-in-out infinite;
+  }
+}
+
+/* Pulsing glow animation for the dramatic button */
+.animate-glow-pulse {
+  animation: dramaticGlowPulse 2s ease-in-out infinite;
+}
+
+@keyframes dramaticGlowPulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px #ff0000,
+      0 0 40px #ff0000,
+      0 0 60px #ff0000,
+      0 0 80px #ff0000,
+      inset 0 0 20px rgba(255, 0, 0, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px #ff0000,
+      0 0 60px #ff0000,
+      0 0 90px #ff0000,
+      0 0 120px #ff0000,
+      0 0 150px #ff0000,
+      inset 0 0 30px rgba(255, 0, 0, 0.2);
   }
 }
 
@@ -192,16 +203,6 @@ All colors MUST be HSL.
     opacity: 0.2;
     box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
   }
-}
-
-@keyframes brainScan {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes brainGrid {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
 }
 
 @keyframes poopPlop {
@@ -226,16 +227,5 @@ All colors MUST be HSL.
   }
   100% {
     transform: translateY(0) rotate(0deg) scaleY(1);
-  }
-}
-
-@keyframes brainPulse {
-  0%, 100% { 
-    text-shadow: 0 0 5px rgba(220, 38, 38, 0.5);
-    transform: scale(1);
-  }
-  50% { 
-    text-shadow: 0 0 20px rgba(220, 38, 38, 0.8), 0 0 30px rgba(220, 38, 38, 0.6);
-    transform: scale(1.02);
   }
 }
