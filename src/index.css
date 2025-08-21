@@ -155,23 +155,21 @@ All colors MUST be HSL.
     animation: recordFade 1.5s ease-in-out infinite;
   }
 
-  /* PSYCHOLOGY & MANIPULATION - SUBTLE DIGITAL GLITCH */
+  /* PSYCHOLOGY & MANIPULATION - SIMPLE RED GLOW */
   .psychology-word {
-    color: #ff0030 !important;
+    color: #ff0000 !important;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    letter-spacing: 0.1em;
-    animation: digitalColorGlitch 3s ease-in-out infinite;
+    animation: simpleRedGlow 3s ease-in-out infinite;
   }
 
   .manipulation-word {
-    color: #ff0030 !important;
+    color: #ff0000 !important;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    letter-spacing: 0.1em;
-    animation: digitalColorGlitch 2s ease-in-out infinite;
+    animation: simpleRedGlow 2s ease-in-out infinite;
   }
 
   /* Subtle Hover Effects */
@@ -240,64 +238,16 @@ All colors MUST be HSL.
   }
 }
 
-/* Digital Color Glitch - Black to Red Transitions */
-@keyframes digitalColorGlitch {
+/* Simple Red Glow Animation - Dark to Bright Red */
+@keyframes simpleRedGlow {
   0% { 
-    color: #ff0030;
-    filter: brightness(1);
-    text-shadow: none;
+    color: #cc0000;
   }
-  10% { 
-    color: #000000;
-    filter: brightness(1);
-  }
-  12% { 
-    color: #ff0030;
-    filter: brightness(1.1);
-  }
-  25% { 
-    color: #ff0030;
-    filter: brightness(1);
-  }
-  35% { 
-    color: #000000;
-    filter: brightness(0.8);
-  }
-  37% { 
-    color: #660000;
-    filter: brightness(1.2);
-  }
-  40% { 
-    color: #ff0030;
-    filter: brightness(1);
-  }
-  60% { 
-    color: #ff0030;
-    filter: brightness(1);
-  }
-  70% { 
-    color: #000000;
-  }
-  72% { 
-    color: #990000;
-  }
-  74% { 
-    color: #ff0030;
-    filter: brightness(1.1);
-  }
-  85% { 
-    color: #ff0030;
-    filter: brightness(1);
-  }
-  90% { 
-    color: #000000;
-  }
-  92% { 
-    color: #ff0030;
+  50% { 
+    color: #ff0000;
   }
   100% { 
-    color: #ff0030;
-    filter: brightness(1);
+    color: #cc0000;
   }
 }
 
