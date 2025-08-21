@@ -13,7 +13,7 @@ const Services = () => {
   }, {
     icon: Flame,
     title: "Guerilla Marketing",
-    description: "Tactics to infiltrate minds via unexpected channels, creating explosive brand awareness without massive ad spend",
+    description: "Stealth tactics that infiltrate minds through unexpected channels, creating explosive brand awareness without massive ad spend",
     features: ["Viral campaigns", "Ambush marketing", "Publicity stunts", "Psychological triggers", "Social hijacking"]
   }, {
     icon: Brain,
