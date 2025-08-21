@@ -160,14 +160,14 @@ All colors MUST be HSL.
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: textFade 1.5s ease-in-out infinite;
+    animation: textFade 3s ease-in-out infinite;
   }
 
   .manipulation-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: textFade 1.5s ease-in-out infinite;
+    animation: textFade 3s ease-in-out infinite;
   }
 
   /* Remove hover effects */
@@ -242,8 +242,8 @@ All colors MUST be HSL.
     opacity: 1;
   }
   50% {
-    color: #ff0000;
-    opacity: 0.2;
+    color: #ff6666;
+    opacity: 0.4;
   }
 }
 
