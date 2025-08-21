@@ -1,7 +1,7 @@
-import { PenTool, Video, Target, Brain, Ghost, HatGlasses } from "lucide-react";
+import { PenTool, Video, Target, Brain, Ghost, Hat-Glasses } from "lucide-react";
 const Services = () => {
   const services = [{
-    icon: HatGlasses,
+    icon: Hat-Glasses,
     title: "Ghostwriting",
     description: "We use the power of language & words to rewire minds and trigger unconscious buying decisions",
     features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
