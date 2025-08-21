@@ -1,82 +1,262 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
-import { useEffect } from "react";
-const Hero = () => {
-  useEffect(() => {
-    // Subtle interactive effects for psychology and manipulate words
-    const psychology = document.querySelector('.psychology-word');
-    const manipulation = document.querySelector('.manipulation-word');
-    const handleClick = function () {
-      // Brief brightness flash on click
-      this.style.filter = 'brightness(1.3)';
-      this.style.textShadow = '0 0 12px rgba(255,0,48,0.8)';
-      setTimeout(() => {
-        this.style.filter = '';
-        this.style.textShadow = '';
-      }, 150);
-    };
-    if (psychology) {
-      psychology.addEventListener('click', handleClick);
-    }
-    if (manipulation) {
-      manipulation.addEventListener('click', handleClick);
-    }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+@layer base {
+  :root {
+    --background: 220 26% 2%;
+    --foreground: 45 29% 97%;
+    --card: 220 26% 3%;
+    --card-foreground: 45 29% 97%;
+    --popover: 220 26% 3%;
+    --popover-foreground: 45 29% 97%;
+    --primary: 0 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 8%;
+    --secondary-foreground: 45 29% 97%;
+    --muted: 220 20% 8%;
+    --muted-foreground: 217 10% 64%;
+    --accent: 0 85% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 29% 97%;
+    --border: 220 20% 12%;
+    --input: 220 20% 12%;
+    --ring: 0 85% 60%;
+    
+    /* Gold colors for stars */
+    --gold: 45 93% 60%;
+    --gold-foreground: 220 26% 2%;
+    
+    /* Premium gradients - now with bright red */
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 2%) 0%, hsl(220 20% 4%) 100%);
+    --gradient-pink: linear-gradient(135deg, hsl(0 85% 60%) 0%, hsl(0 75% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 26% 3%) 0%, hsl(220 20% 5%) 100%);
+    
+    /* Shadows - now with red glow */
+    --shadow-glow: 0 0 40px hsla(0, 85%, 60%, 0.15);
+    --shadow-card: 0 10px 40px hsla(220, 26%, 2%, 0.5);
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 220 26% 1%;
+    --foreground: 45 29% 97%;
+    --card: 220 26% 2%;
+    --card-foreground: 45 29% 97%;
+    --popover: 220 26% 2%;
+    --popover-foreground: 45 29% 97%;
+    --primary: 0 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 6%;
+    --secondary-foreground: 45 29% 97%;
+    --muted: 220 20% 6%;
+    --muted-foreground: 217 10% 60%;
+    --accent: 0 85% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 45 29% 97%;
+    --border: 220 20% 10%;
+    --input: 220 20% 10%;
+    --ring: 0 85% 60%;
+    
+    /* Gold colors for dark mode */
+    --gold: 45 93% 60%;
+    --gold-foreground: 220 26% 1%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-hero);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+@layer components {
+  .hero-text {
+    @apply text-4xl md:text-6xl lg:text-7xl font-black tracking-tight;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent;
+  }
+  .service-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 backdrop-blur-sm border border-border/50 text-sm font-medium;
+  }
+  .testimonial-card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+  
+  /* EXACT "DO NOT PRESS" BUTTON REPLICA FROM LEFT IMAGE */
+  .glow-button {
+    @apply relative overflow-hidden;
+    background: #ff0000 !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 12px 40px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    border-radius: 4px !important;
+    transition: none !important;
+    
+    /* Subtle 0.5 opacity glow */
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
+  }
 
-    // Cleanup event listeners
-    return () => {
-      if (psychology) {
-        psychology.removeEventListener('click', handleClick);
-      }
-      if (manipulation) {
-        manipulation.removeEventListener('click', handleClick);
-      }
-    };
-  }, []);
-  return <section className="min-h-screen flex items-center justify-center pt-20 pb-16 py-px">
-      <div className="container mx-auto px-6 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="hero-text">
-            <span className="block mb-4">99% of content fails because it's <span className="poo-word">shit</span>.</span>
-            <span className="block">Start using <span className="psychology-word font-bold">psychology<div className="urgency-dot"></div></span> to <span className="manipulation-word font-bold">manipulate<div className="urgency-dot"></div></span> buying.</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We apply government &amp; military grade psychological manipulation techniques to your operations.
-          </p>
+  .glow-button:hover {
+    background: #ff0000 !important;
+    color: #000000 !important;
+    transform: none !important;
+    
+    /* Same subtle glow on hover */
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
+  }
+  
+  .bg-gradient-pink {
+    background: linear-gradient(135deg, rgb(220, 38, 38) 0%, rgb(239, 68, 68) 100%) !important;
+  }
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Content Writing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Script Writing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Guerilla Marketing
-            </div>
-            <div className="service-badge">
-              <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Psymarketing
-            </div>
-          </div>
+  .poo-word {
+    @apply relative inline-block;
+    color: #8B4513;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.3);
+    animation: poopPlop 2s ease-out;
+  }
 
-          <div className="space-y-6">
-            <Button size="lg" className="glow-button font-semibold px-8 py-6 text-lg animate-glow-pulse">
-              DO NOT PRESS
-            </Button>
+  .record-blink {
+    animation: recordFade 1.5s ease-in-out infinite;
+  }
 
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
-              </div>
-              <span>4.9/5 from 127 clients</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>;
-};
-export default Hero;
+  /* PSYCHOLOGY & MANIPULATION - GENTLE FADE ANIMATION */
+  .psychology-word {
+    color: #ff0000 !important;
+    display: inline-block;
+    position: relative;
+    animation: gentleFade 4s ease-in-out infinite;
+  }
+
+  .manipulation-word {
+    color: #ff0000 !important;
+    display: inline-block;
+    position: relative;
+    animation: gentleFade 3s ease-in-out infinite;
+  }
+
+  /* Remove hover effects */
+  .psychology-word:hover {
+    filter: none;
+  }
+
+  .manipulation-word:hover {
+    filter: none;
+  }
+
+  /* Urgency Indicators */
+  .urgency-dot {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 4px;
+    height: 4px;
+    background: rgba(255,0,48,0.7);
+    border-radius: 50%;
+    animation: subtleUrgencyPulse 2s ease-in-out infinite;
+  }
+}
+
+/* Single layer 0.5 opacity glow */
+.animate-glow-pulse {
+  animation: none;
+  box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
+}
+
+@keyframes recordFade {
+  0%, 100% {
+    background-color: rgb(239, 68, 68);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  }
+  50% {
+    background-color: rgb(185, 28, 28);
+    opacity: 0.2;
+    box-shadow: 0 0 4px rgba(239, 68, 68, 0.3);
+  }
+}
+
+@keyframes poopPlop {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) rotate(0deg);
+  }
+  85% {
+    transform: translateY(-10px) rotate(-5deg) scaleY(0.9);
+  }
+  90% {
+    transform: translateY(5px) rotate(3deg) scaleY(1.1);
+  }
+  95% {
+    transform: translateY(-3px) rotate(-1deg) scaleY(0.95);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scaleY(1);
+  }
+}
+
+/* Gentle Fade Animation - Dark to Bright Red */
+@keyframes gentleFade {
+  0% { 
+    color: #990000;
+  }
+  50% { 
+    color: #ff0000;
+  }
+  100% { 
+    color: #990000;
+  }
+}
+
+@keyframes subtleUrgencyPulse {
+  0% { 
+    opacity: 0.4;
+  }
+  50% { 
+    opacity: 0.8;
+  }
+  100% { 
+    opacity: 0.4;
+  }
+}
