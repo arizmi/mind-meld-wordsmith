@@ -16,7 +16,7 @@ const Results = () => {
     },
     {
       icon: DollarSign,
-      value: "$1.2M+",
+      value: "$23M+",
       label: "Revenue attributed",
       description: "To our content strategies"
     },
