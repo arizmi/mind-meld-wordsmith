@@ -7,22 +7,22 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
-            <span className="block mb-4">Your marketing fails because it's <span className="poo-word">shit</span>.</span>
+            <span className="block mb-4">Your marketing's failing because it's <span className="poo-word">shit</span>.</span>
             <span className="block">Start using <span className="psychology-word font-bold">psychology<div className="urgency-dot"></div></span> to <span className="manipulation-word font-bold">manipulate<div className="urgency-dot"></div></span> buying.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Learn how to apply government &amp; military grade psychological manipulation techniques to your operations.
+            We apply government &amp; military grade psychological manipulation techniques to your operations.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Ghostwriting
+              Content Writing
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Paid Advertising
+              Script Writing
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
