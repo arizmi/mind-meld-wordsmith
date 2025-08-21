@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Ghostwriting
+              Psymarketing
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
@@ -26,11 +26,11 @@ const Hero = () => {
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Guerilla Marketing
+              Ghostwriting
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Psymarketing
+              Guerilla Marketing
             </div>
           </div>
 
