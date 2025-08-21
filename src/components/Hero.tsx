@@ -10,7 +10,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We use declassified government & military grade psychological manipulation to drive traffic & increase sales.
+            We use declassified government & military psychological manipulation techniques to drive traffic & increase sales.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
