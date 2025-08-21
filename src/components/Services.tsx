@@ -18,8 +18,8 @@ const Services = () => {
   }, {
     icon: Brain,
     title: "Psymarketing",
-    description: "Utilise military and intelligence grade tactics in your campaigns",
-    features: ["Behavioral triggers", "Persuasion techniques", "Consumer psychology", "Psychological Programming"]
+    description: "Advanced psychological warfare tactics that exploit cognitive vulnerabilities to control buying behavior at the subconscious level",
+    features: ["Behavioral triggers", "Cognitive bias exploitation", "Neuromarketing techniques", "Psychological profiling", "Subliminal influence systems"]
   }];
   return <section id="services" className="bg-secondary/20 py-px">
       <div className="container mx-auto px-6">
