@@ -54,13 +54,12 @@ const Results = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Words Hurt & People Lie
-            But Data Does <span className="gradient-text">Neither</span>
+            <span className="block">Words Hurt & People Lie...</span>
+            <span className="block">But Data Does <span className="gradient-text">Neither</span></span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           </p>
         </div>
-
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {metrics.map((metric, index) => (
@@ -74,7 +73,6 @@ const Results = () => {
             </div>
           ))}
         </div>
-
         {/* Case Studies */}
         <div className="max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-center mb-12">Case Studies</h3>
