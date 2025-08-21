@@ -112,42 +112,47 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-card);
   }
   
-  /* DRAMATIC RED GLOWING BUTTON - like "DO NOT PRESS" */
+  /* DRAMATIC RED GLOWING BUTTON - EXACT "DO NOT PRESS" REPLICA */
   .glow-button {
     @apply relative overflow-hidden;
     background: #ff0000 !important;
     color: #000000 !important;
     border: none !important;
-    padding: 16px 32px !important;
+    padding: 20px 48px !important;
     font-weight: 900 !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
     text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    border-radius: 8px !important;
-    transition: all 0.3s ease !important;
+    letter-spacing: 3px !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
     
-    /* Intense red glow effect */
+    /* Exact intense red glow to match the image */
+    box-shadow: 
+      0 0 15px #ff0000,
+      0 0 30px #ff0000,
+      0 0 45px #ff0000,
+      0 0 60px #ff0000,
+      0 0 75px #ff0000,
+      0 0 90px #ff0000,
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .glow-button:hover {
+    background: #ff0000 !important;
+    color: #000000 !important;
+    transform: none !important;
+    
+    /* Maintain the same intense glow on hover */
     box-shadow: 
       0 0 20px #ff0000,
       0 0 40px #ff0000,
       0 0 60px #ff0000,
       0 0 80px #ff0000,
-      inset 0 0 20px rgba(255, 0, 0, 0.1) !important;
-  }
-
-  .glow-button:hover {
-    background: #ff3333 !important;
-    color: #000000 !important;
-    transform: scale(1.05) !important;
-    
-    /* Even more intense glow on hover */
-    box-shadow: 
-      0 0 30px #ff0000,
-      0 0 60px #ff0000,
-      0 0 90px #ff0000,
+      0 0 100px #ff0000,
       0 0 120px #ff0000,
-      0 0 150px #ff0000,
-      inset 0 0 30px rgba(255, 0, 0, 0.2) !important;
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2) !important;
   }
   
   .bg-gradient-pink {
@@ -167,28 +172,33 @@ All colors MUST be HSL.
   }
 }
 
-/* Pulsing glow animation for the dramatic button */
+/* Pulsing glow animation - exact replica of DO NOT PRESS */
 .animate-glow-pulse {
-  animation: dramaticGlowPulse 2s ease-in-out infinite;
+  animation: exactGlowPulse 3s ease-in-out infinite;
 }
 
-@keyframes dramaticGlowPulse {
+@keyframes exactGlowPulse {
   0%, 100% {
+    box-shadow: 
+      0 0 15px #ff0000,
+      0 0 30px #ff0000,
+      0 0 45px #ff0000,
+      0 0 60px #ff0000,
+      0 0 75px #ff0000,
+      0 0 90px #ff0000,
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
     box-shadow: 
       0 0 20px #ff0000,
       0 0 40px #ff0000,
       0 0 60px #ff0000,
       0 0 80px #ff0000,
-      inset 0 0 20px rgba(255, 0, 0, 0.1);
-  }
-  50% {
-    box-shadow: 
-      0 0 30px #ff0000,
-      0 0 60px #ff0000,
-      0 0 90px #ff0000,
+      0 0 100px #ff0000,
       0 0 120px #ff0000,
-      0 0 150px #ff0000,
-      inset 0 0 30px rgba(255, 0, 0, 0.2);
+      inset 0 2px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
