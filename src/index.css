@@ -190,6 +190,20 @@ All colors MUST be HSL.
     border-radius: 50%;
     animation: subtleUrgencyPulse 2s ease-in-out infinite;
   }
+
+  /* WARNING SCROLLING TEXT */
+  .warning-scroll {
+    position: absolute;
+    white-space: nowrap;
+    color: #ff0000;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: scrollWarning 15s linear infinite;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+  }
 }
 
 /* Single layer 0.5 opacity glow */
@@ -233,5 +247,14 @@ All colors MUST be HSL.
   }
   100% { 
     opacity: 0.4;
+  }
+}
+
+@keyframes scrollWarning {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
