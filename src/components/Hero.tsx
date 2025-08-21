@@ -22,7 +22,7 @@ const Hero = () => {
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Script Writing
+              Paid Advertising
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
