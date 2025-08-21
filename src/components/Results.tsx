@@ -54,7 +54,7 @@ const Results = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="block">Words Hurt & People Lie...</span>
+            <span className="block mb-2">Words <span className="text-red-500">Hurt</span> & People <span className="text-red-500">Lie</span>...</span>
             <span className="block">But Data Does <span className="gradient-text">Neither</span></span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
