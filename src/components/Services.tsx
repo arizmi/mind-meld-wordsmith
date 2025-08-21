@@ -27,9 +27,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Services That <span className="gradient-text">Convert</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From viral content to psychological persuasion, we craft marketing solutions that drive real results.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">From viral content to paid advertising; we use psychological solutions to influence specific emotional states that will drive sales.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
