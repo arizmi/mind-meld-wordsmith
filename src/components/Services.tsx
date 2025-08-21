@@ -1,4 +1,4 @@
-import { PenTool, Video, Target, Brain, Ghost } from "lucide-react"; 
+import { PenTool, Video, Target, Brain, Ghost, DollarSign } from "lucide-react"; 
 const Services = () => {
   const services = [{
     icon: PenTool,
@@ -6,7 +6,7 @@ const Services = () => {
     description: "We use the power of language & words to rewire minds and trigger unconscious buying decisions",
     features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
   }, {
-    icon: Video,
+    icon: DollarSign,
     title: "Paid Advertising",
     description: "Psyop level ad campaigns that exploit cognitive biases and trigger impulsions to buy",
     features: ["Google Search Ads", "Google Shopping Ads", "YouTube advertising", "Google Display Network", "Bing Ads"]
