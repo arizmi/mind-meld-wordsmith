@@ -155,19 +155,19 @@ All colors MUST be HSL.
     animation: recordFade 1.5s ease-in-out infinite;
   }
 
-  /* PSYCHOLOGY - PULSE ANIMATION */
+  /* PSYCHOLOGY & MANIPULATION - RECORD FADE ANIMATION */
   .psychology-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: redPulse 2s ease-in-out infinite;
+    animation: recordFade 1.5s ease-in-out infinite;
   }
 
   .manipulation-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: gentleFade 3s ease-in-out infinite;
+    animation: recordFade 1.5s ease-in-out infinite;
   }
 
   /* Remove hover effects */
@@ -233,35 +233,6 @@ All colors MUST be HSL.
   }
   100% {
     transform: translateY(0) rotate(0deg) scaleY(1);
-  }
-}
-
-/* Red Pulse Animation - Dark to Bright Red with Scale */
-@keyframes redPulse {
-  0% { 
-    color: #990000;
-    transform: scale(1);
-  }
-  50% { 
-    color: #ff0000;
-    transform: scale(1.05);
-  }
-  100% { 
-    color: #990000;
-    transform: scale(1);
-  }
-}
-
-/* Gentle Fade Animation - Dark to Bright Red */
-@keyframes gentleFade {
-  0% { 
-    color: #990000;
-  }
-  50% { 
-    color: #ff0000;
-  }
-  100% { 
-    color: #990000;
   }
 }
 
