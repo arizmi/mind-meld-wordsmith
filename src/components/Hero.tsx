@@ -5,7 +5,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="hero-text">
-            <span className="block mb-4 font-semibold">99% of content fails because it's <span className="poo-word">shit</span>.</span>
+            <span className="block mb-4 font-semibold">99% of marketing fails because it's <span className="poo-word">shit</span>.</span>
             <span className="block text-7xl font-semibold">Start using <span className="psychology-word font-bold">psychology<div className="urgency-dot"></div></span> to <span className="manipulation-word font-bold">manipulate<div className="urgency-dot"></div></span> buying.</span>
           </h1>
           
