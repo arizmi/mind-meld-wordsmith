@@ -57,7 +57,7 @@ const Results = () => {
             Proven <span className="gradient-text">Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Numbers don't lie. Our strategies deliver measurable impact for businesses of all sizes.
+            Words hurt, humans lie... But data does neither.
           </p>
         </div>
 
