@@ -54,10 +54,9 @@ const Results = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Words hurt, humans lie... But data does <span className="gradient-text">Neither</span>
+            Words Hurt & Humans Lie, But Data Does <span className="gradient-text">Neither</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Words hurt, humans lie... But data does neither.
           </p>
         </div>
 
