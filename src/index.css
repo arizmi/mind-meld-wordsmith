@@ -115,7 +115,7 @@ All colors MUST be HSL.
   /* EXACT "DO NOT PRESS" BUTTON REPLICA FROM LEFT IMAGE */
   .glow-button {
     @apply relative overflow-hidden;
-    background: #ff0000 !important;
+    background: #ff3333 !important;
     color: #000000 !important;
     border: none !important;
     padding: 12px 40px !important;
@@ -131,7 +131,7 @@ All colors MUST be HSL.
   }
 
   .glow-button:hover {
-    background: #ff0000 !important;
+    background: #ff3333 !important;
     color: #000000 !important;
     transform: none !important;
     
