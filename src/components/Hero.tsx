@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           <div className="space-y-6">
-            <Button size="lg" className="glow-button bg-gradient-pink hover:bg-gradient-pink/90 text-background font-semibold px-8 py-6 text-lg animate-glow-pulse">
+            <Button size="lg" className="glow-button font-semibold px-8 py-6 text-lg animate-glow-pulse">
               DO NOT PRESS
             </Button>
 
