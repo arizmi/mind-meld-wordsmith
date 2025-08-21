@@ -155,19 +155,19 @@ All colors MUST be HSL.
     animation: recordFade 1.5s ease-in-out infinite;
   }
 
-  /* PSYCHOLOGY & MANIPULATION - RECORD FADE ANIMATION */
+  /* PSYCHOLOGY & MANIPULATION - TEXT FADE ANIMATION */
   .psychology-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: recordFade 1.5s ease-in-out infinite;
+    animation: textFade 1.5s ease-in-out infinite;
   }
 
   .manipulation-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    animation: recordFade 1.5s ease-in-out infinite;
+    animation: textFade 1.5s ease-in-out infinite;
   }
 
   /* Remove hover effects */
@@ -233,6 +233,17 @@ All colors MUST be HSL.
   }
   100% {
     transform: translateY(0) rotate(0deg) scaleY(1);
+  }
+}
+
+@keyframes textFade {
+  0%, 100% {
+    color: #ff0000;
+    opacity: 1;
+  }
+  50% {
+    color: #ff0000;
+    opacity: 0.2;
   }
 }
 
