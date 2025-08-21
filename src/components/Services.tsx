@@ -1,4 +1,4 @@
-import { PenTool, Video, Target, Brain, Ghost, DollarSign } from "lucide-react"; 
+import { PenTool, Video, Target, Brain, Ghost, DollarSign, Flame } from "lucide-react"; 
 const Services = () => {
   const services = [{
     icon: PenTool,
@@ -11,7 +11,7 @@ const Services = () => {
     description: "Psyop level ad campaigns that exploit cognitive biases and trigger impulsions to buy",
     features: ["Google Search Ads", "Google Shopping Ads", "YouTube advertising", "Google Display Network", "Bing Ads"]
   }, {
-    icon: Target,
+    icon: Flame,
     title: "Guerilla Marketing",
     description: "Stealth tactics that infiltrate minds through unexpected channels, creating explosive brand awareness without massive ad spend",
     features: ["Viral campaigns", "Ambush marketing", "Publicity stunts", "Psychological triggers", "Social hijacking"]
