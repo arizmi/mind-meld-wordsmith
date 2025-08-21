@@ -27,7 +27,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             How We <span className="manipulation-word font-bold">Control<div className="urgency-dot"></div></span> Your Customers
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">From paid advertising to ghostwriting; we use government & military grade psychological manipulation to increase sales.</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">From paid advertising to ghostwriting; we use declassified government & military grade psychological manipulation systems to increase sales.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => <div key={index} className="testimonial-card group hover:scale-105 transition-all duration-300">
