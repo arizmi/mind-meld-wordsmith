@@ -9,9 +9,7 @@ const Hero = () => {
             <span className="block text-7xl font-semibold">Start using <span className="psychology-word font-bold">psychology<div className="urgency-dot"></div></span> to <span className="manipulation-word font-bold">manipulate<div className="urgency-dot"></div></span> buying.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We apply government &amp; military grade psychological manipulation techniques to your operations.
-          </p>
+          
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
