@@ -27,7 +27,7 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             How We <span className="manipulation-word font-bold">Control<div className="urgency-dot"></div></span> Your Customers
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">From viral content to paid advertising; we use psychological solutions to influence specific emotional states that will drive sales.</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">From paid advertising to ghostwriting; we use psychological triggers to influence specific emotional states that will drive sales.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
