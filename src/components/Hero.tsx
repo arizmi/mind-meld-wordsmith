@@ -33,9 +33,7 @@ const Hero = () => {
           </div>
 
           <div className="space-y-6">
-            <Button size="lg" className="glow-button font-semibold px-8 py-6 text-lg animate-glow-pulse">
-              DO NOT PRESS
-            </Button>
+            <Button size="lg" className="glow-button font-semibold py-6 text-lg animate-glow-pulse px-[25px]">RESTRICTED ACCESS</Button>
 
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
