@@ -7,9 +7,9 @@ const Services = () => {
     features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
   }, {
     icon: Video,
-    title: "Script Writing",
-    description: "Compelling scripts for long-form and short-form video content",
-    features: ["YouTube scripts", "TikTok content", "VSLs", "Educational content", "Sales scripts"]
+    title: "Paid Advertising",
+    description: "Psyop level ad campaigns that exploit cognitive biases and trigger impulsions to buy",
+    features: ["Google Search Ads", "Google Shopping Ads", "YouTube advertising", "Google Display Network", "Bing Ads"]
   }, {
     icon: Target,
     title: "Guerilla Marketing",
