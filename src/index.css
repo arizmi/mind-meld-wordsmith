@@ -126,8 +126,8 @@ All colors MUST be HSL.
     border-radius: 4px !important;
     transition: none !important;
     
-    /* Single layer glow like the reference */
-    box-shadow: 0 0 80px #ff0000 !important;
+    /* Subtle 0.5 opacity glow */
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
   }
 
   .glow-button:hover {
@@ -135,8 +135,8 @@ All colors MUST be HSL.
     color: #000000 !important;
     transform: none !important;
     
-    /* Same single glow on hover */
-    box-shadow: 0 0 80px #ff0000 !important;
+    /* Same subtle glow on hover */
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
   }
   
   .bg-gradient-pink {
@@ -156,10 +156,10 @@ All colors MUST be HSL.
   }
 }
 
-/* Single layer static glow */
+/* Single layer 0.5 opacity glow */
 .animate-glow-pulse {
   animation: none;
-  box-shadow: 0 0 80px #ff0000 !important;
+  box-shadow: 0 0 80px rgba(255, 0, 0, 0.5) !important;
 }
 
 @keyframes recordFade {
