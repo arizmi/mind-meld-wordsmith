@@ -1,7 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
+import { useEffect } from "react";
 
 const Hero = () => {
+  useEffect(() => {
+    // Subtle interactive effects for psychology and manipulate words
+    const psychology = document.querySelector('.psychology-word');
+    const manipulation = document.querySelector('.manipulation-word');
+
+    const handleClick = function() {
+      // Brief brightness flash on click
+      this.style.filter = 'brightness(1.3)';
+      this.style.textShadow = '0 0 12px rgba(255,0,48,0.8)';
+      
+      setTimeout(() => {
+        this.style.filter = '';
+        this.style.textShadow = '';
+      }, 150);
+    };
+
+    if (psychology) {
+      psychology.addEventListener('click', handleClick);
+    }
+    if (manipulation) {
+      manipulation.addEventListener('click', handleClick);
+    }
+
+    // Cleanup event listeners
+    return () => {
+      if (psychology) {
+        psychology.removeEventListener('click', handleClick);
+      }
+      if (manipulation) {
+        manipulation.removeEventListener('click', handleClick);
+      }
+    };
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 pb-16">
       <div className="container mx-auto px-6 text-center">
