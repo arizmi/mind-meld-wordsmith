@@ -14,7 +14,7 @@ const Services = () => {
     icon: Target,
     title: "Guerilla Marketing",
     description: "Stealth tactics that infiltrate minds through unexpected channels, creating explosive brand awareness without massive ad spend",
-    features: ["Viral campaigns", "Mass marketing", "Buzz generation", "Creative stunts"]
+    features: ["Viral campaigns", "Ambush marketing, "Publicity stunts", "Psychological triggers, "Social hijacking"]
   }, {
     icon: Brain,
     title: "Psymarketing",
