@@ -126,16 +126,8 @@ All colors MUST be HSL.
     border-radius: 4px !important;
     transition: none !important;
     
-    /* EXACT glow from left image - intense red spread */
-    box-shadow: 
-      0 0 20px #ff0000,
-      0 0 40px #ff0000,
-      0 0 60px #ff0000,
-      0 0 80px #ff0000,
-      0 0 100px #ff0000,
-      0 0 120px #ff0000,
-      0 0 140px #ff0000,
-      0 0 160px #ff0000 !important;
+    /* Single layer glow like the reference */
+    box-shadow: 0 0 80px #ff0000 !important;
   }
 
   .glow-button:hover {
@@ -143,16 +135,8 @@ All colors MUST be HSL.
     color: #000000 !important;
     transform: none !important;
     
-    /* Keep exact same glow on hover */
-    box-shadow: 
-      0 0 20px #ff0000,
-      0 0 40px #ff0000,
-      0 0 60px #ff0000,
-      0 0 80px #ff0000,
-      0 0 100px #ff0000,
-      0 0 120px #ff0000,
-      0 0 140px #ff0000,
-      0 0 160px #ff0000 !important;
+    /* Same single glow on hover */
+    box-shadow: 0 0 80px #ff0000 !important;
   }
   
   .bg-gradient-pink {
@@ -172,18 +156,10 @@ All colors MUST be HSL.
   }
 }
 
-/* NO PULSING - Static glow like the left image */
+/* Single layer static glow */
 .animate-glow-pulse {
   animation: none;
-  box-shadow: 
-    0 0 20px #ff0000,
-    0 0 40px #ff0000,
-    0 0 60px #ff0000,
-    0 0 80px #ff0000,
-    0 0 100px #ff0000,
-    0 0 120px #ff0000,
-    0 0 140px #ff0000,
-    0 0 160px #ff0000 !important;
+  box-shadow: 0 0 80px #ff0000 !important;
 }
 
 @keyframes recordFade {
