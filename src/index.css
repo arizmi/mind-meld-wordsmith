@@ -155,28 +155,28 @@ All colors MUST be HSL.
     animation: recordFade 1.5s ease-in-out infinite;
   }
 
-  /* PSYCHOLOGY & MANIPULATION - NO ANIMATION */
+  /* PSYCHOLOGY & MANIPULATION - GENTLE FADE ANIMATION */
   .psychology-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    cursor: pointer;
+    animation: gentleFade 4s ease-in-out infinite;
   }
 
   .manipulation-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
-    cursor: pointer;
+    animation: gentleFade 3s ease-in-out infinite;
   }
 
-  /* Subtle Hover Effects */
+  /* Remove hover effects */
   .psychology-word:hover {
-    filter: brightness(1.15);
+    filter: none;
   }
 
   .manipulation-word:hover {
-    filter: brightness(1.15);
+    filter: none;
   }
 
   /* Urgency Indicators */
@@ -233,6 +233,19 @@ All colors MUST be HSL.
   }
   100% {
     transform: translateY(0) rotate(0deg) scaleY(1);
+  }
+}
+
+/* Gentle Fade Animation - Dark to Bright Red */
+@keyframes gentleFade {
+  0% { 
+    color: #990000;
+  }
+  50% { 
+    color: #ff0000;
+  }
+  100% { 
+    color: #990000;
   }
 }
 
