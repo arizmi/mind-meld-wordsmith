@@ -16,7 +16,7 @@ const Results = () => {
     },
     {
       icon: DollarSign,
-      value: "$23M+",
+      value: "$1.2M+",
       label: "Revenue attributed",
       description: "To our content strategies"
     },
@@ -72,30 +72,6 @@ const Results = () => {
               <div className="text-sm text-muted-foreground">{metric.description}</div>
             </div>
           ))}
-        </div>
-        {/* Case Studies */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-12">Case Studies</h3>
-          <div className="space-y-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="testimonial-card">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-primary mb-2">{study.client}</h4>
-                    <p className="text-sm text-muted-foreground">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Solution</h4>
-                    <p className="text-sm text-muted-foreground">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Result</h4>
-                    <p className="text-sm font-medium text-green-400">{study.result}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
