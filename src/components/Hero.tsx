@@ -12,17 +12,17 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We apply government &amp; military grade psychological manipulation techniques to your operations.
+            Learn how to apply government &amp; military grade psychological manipulation techniques to your operations.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Content Writing
+              Ghostwriting
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
-              Script Writing
+              Paid Advertising
             </div>
             <div className="service-badge">
               <div className="w-2 h-2 rounded-full bg-red-500 record-blink"></div>
