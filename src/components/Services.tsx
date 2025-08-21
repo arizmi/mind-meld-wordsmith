@@ -3,7 +3,7 @@ const Services = () => {
   const services = [{
     icon: PenTool,
     title: "Ghostwriting",
-    description: "We use the power of language to rewire your customers minds, subconsciously compelling them to buy from you, sometimes without even knowing why",
+    description: "Language that rewires minds and triggers unconscious buying decisions",
     features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
   }, {
     icon: Video,
