@@ -155,13 +155,12 @@ All colors MUST be HSL.
     animation: recordFade 1.5s ease-in-out infinite;
   }
 
-  /* PSYCHOLOGY & MANIPULATION - SIMPLE RED GLOW */
+  /* PSYCHOLOGY & MANIPULATION - NO ANIMATION */
   .psychology-word {
     color: #ff0000 !important;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    animation: simpleRedGlow 3s ease-in-out infinite;
   }
 
   .manipulation-word {
@@ -169,7 +168,6 @@ All colors MUST be HSL.
     display: inline-block;
     position: relative;
     cursor: pointer;
-    animation: simpleRedGlow 2s ease-in-out infinite;
   }
 
   /* Subtle Hover Effects */
@@ -235,19 +233,6 @@ All colors MUST be HSL.
   }
   100% {
     transform: translateY(0) rotate(0deg) scaleY(1);
-  }
-}
-
-/* Simple Red Glow Animation - Dark to Bright Red */
-@keyframes simpleRedGlow {
-  0% { 
-    color: #cc0000;
-  }
-  50% { 
-    color: #ff0000;
-  }
-  100% { 
-    color: #cc0000;
   }
 }
 
