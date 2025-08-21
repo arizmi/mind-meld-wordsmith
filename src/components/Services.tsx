@@ -2,9 +2,9 @@ import { PenTool, Video, Target, Brain } from "lucide-react";
 const Services = () => {
   const services = [{
     icon: PenTool,
-    title: "Content Writing",
+    title: "Ghostwriting",
     description: "Tweets, posts, and written content that drives engagement and conversions",
-    features: ["Twitter threads", "LinkedIn posts", "Blog content", "Email sequences"]
+    features: ["Social media content", "Educational content", "Video scripts", "Sales scripts", "VSLs"]
   }, {
     icon: Video,
     title: "Script Writing",
